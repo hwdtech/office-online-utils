@@ -1,5 +1,7 @@
-const Discovery = require('./discovery/discovery');
+const Discovery = require('./lib/discovery/discovery');
+const DefaultHostPage = require('./lib/default-host-page');
 
 module.exports = {
-  Discovery
+  Discovery,
+  DefaultHostPage
 };
