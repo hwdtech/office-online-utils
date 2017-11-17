@@ -6,3 +6,4 @@ yarn.lock
 
 lib/discovery/discovery-fixture.xml
 coverage
+.idea
