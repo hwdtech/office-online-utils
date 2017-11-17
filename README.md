@@ -48,4 +48,4 @@ app.get('/files/:id', (req, res, next) => {
 });
 ```
 
-You acn see all available options [here](/tree/master/lib/default-host-page.js#L4)
+You can see all available options [here](/lib/default-host-page.js#L4)
