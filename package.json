@@ -14,7 +14,10 @@
     "node": "8.9.x"
   },
   "scripts": {
-    "test": "eslint ./discovery index.js && jest"
+    "lint": "eslint ./discovery index.js --fix",
+    "test": "npm run lint && jest",
+    "precommit": "lint-staged",
+    "prepush": "npm test"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2"
@@ -26,6 +29,7 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-security": "^1.4.0",
+    "husky": "^0.14.3",
     "jest": "^21.2.1",
     "jest-cli": "^21.2.1",
     "jest-runner-eslint": "^0.3.0",
@@ -33,14 +37,8 @@
     "prettier": "^1.8.2"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
   },
   "prettier": {
     "printWidth": 80,
