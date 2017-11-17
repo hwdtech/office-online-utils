@@ -50,10 +50,6 @@
     "testEnvironment": "node",
     "testRegex": "-test\\.js$",
     "collectCoverage": true,
-    "collectCoverageFrom": [
-      "discovery/**/*.js",
-      "index.js",
-      "!**/node_modules/**"
-    ]
+    "collectCoverageFrom": ["lib/**/*.js", "index.js", "!**/node_modules/**"]
   }
 }
