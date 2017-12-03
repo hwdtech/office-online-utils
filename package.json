@@ -15,7 +15,8 @@
   },
   "scripts": {
     "lint": "eslint ./discovery index.js --fix",
-    "test": "npm run lint && jest",
+    "pretest": "npm run lint",
+    "test": "jest",
     "precommit": "lint-staged",
     "prepush": "npm test"
   },
