@@ -16,7 +16,8 @@
   "scripts": {
     "lint": "eslint ./discovery index.js --fix",
     "pretest": "npm run lint",
-    "test": "jest",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
     "precommit": "lint-staged",
     "prepush": "npm test"
   },
@@ -44,14 +45,13 @@
     "*.json": ["prettier --write", "git add"]
   },
   "prettier": {
-    "printWidth": 80,
+    "printWidth": 100,
     "singleQuote": true,
     "trailingComma": "none"
   },
   "jest": {
     "testEnvironment": "node",
-    "testRegex": "-test\\.js$",
-    "collectCoverage": true,
+    "testRegex": "\\.test\\.js$",
     "collectCoverageFrom": ["lib/**/*.js", "index.js", "!**/node_modules/**"]
   }
 }
