@@ -6,19 +6,21 @@ WOPI discovery is the process by which a WOPI host identifies Office Online capa
 Discovery loader helps to process discovery.xml files easily, for ex
 
 ```js
-const Discovery = require('./lib/discovery/discovery');
-const WopiActions = require('./lib/discovery/actions');
+const Discovery = require('office-online-utils/lib/discovery/discovery');
+const WopiActions = require('office-online-utils/lib/discovery/actions');
 
-const discovery = Discovery.fromFile(`path/to/discovery.xml`);
+(async () => {
+  const discovery = await Discovery.fromFile(`path/to/discovery.xml`);
 
-// finds an action in https net-zone for viewing .docx files
-const action = discovery.action('https', WopiActions.VIEW, 'docx');
+  // finds an action in https net-zone for viewing .docx files
+  const action = discovery.action('https', WopiActions.VIEW, 'docx');
+})()
 ```
 
 Discovery action urls have a bunch of template placeholders you have to replace. Actions allow to easily build final Office Online url, for ex
 
 ```js
-const Placeholders = require('./lib/discovery/placeholders');
+const Placeholders = require('office-online-utils/lib/discovery/placeholders');
 
 const officeUrl = action.getUrl(
   'https://example.com/wopi/files/123',
@@ -37,12 +39,12 @@ The resulted Office Online url can be used at the [host page](https://wopi.readt
 In the most cases file host page is a fullscreen version of Office Online page. Default host page renderer makes this event easier. Express example: 
 
 ```js
-const DefaultHostPage = require('./lib/default-host-page');
+const DefaultHostPage = require('office-online-utils/lib/default-host-page');
 
 // assume app is an express app or router
 app.get('/files/:id', (req, res, next) => {
   // build page options first 
-  class hostPage = new DefaultHostPage(opts);
+  const hostPage = new DefaultHostPage(opts);
   res.setHeader('Content-Type', 'text/html');
   res.end(hostPage.render())
 });
