@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "he": "^1.1.1"
+    "he": "^1.1.1",
+    "node-fetch": "^1.7.3"
   },
   "devDependencies": {
     "eslint": "^4.11.0",
