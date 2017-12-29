@@ -55,6 +55,6 @@
   "jest": {
     "testEnvironment": "node",
     "testRegex": "\\.test\\.js$",
-    "collectCoverageFrom": ["lib/**/*.js", "index.js", "!**/node_modules/**"]
+    "collectCoverageFrom": ["lib/**/*.js", "!**/node_modules/**"]
   }
 }
