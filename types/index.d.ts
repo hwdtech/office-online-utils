@@ -3,7 +3,7 @@
 import { ServerResponse } from 'http';
 
 interface Constants {
-  [key: string]: string;
+  [key: string]: string | number;
 }
 
 export const actions: Constants;
