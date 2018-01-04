@@ -2,12 +2,13 @@
 
 import { ServerResponse } from 'http';
 
-interface Constants {
-  [key: string]: string | number;
-}
+export const actions: {
+  [key: string]: string;
+};
 
-export const actions: Constants;
-export const placeholders: Constants;
+export const placeholders: {
+  [key: string]: string | number;
+};
 
 export interface OfficeUrlOptions {
   [key: string]: string
