@@ -1,4 +1,4 @@
-import { actions, placeholders, Discovery, DefaultHostPage } from 'office-online-utils';
+import { actions, placeholders, Discovery, DefaultHostPage, headers } from 'office-online-utils';
 
 const discovery = new Discovery('<?xml version="1.0" encoding="utf-8"?><wopi-discovery></wopi-discovery></xml>');
 
@@ -21,3 +21,8 @@ const defaultHostPage = new DefaultHostPage({
 
 // $ExpectType string
 defaultHostPage.render();
+
+// $ExpectType string
+headers.request.CORRELATION_ID;
+// $ExpectType string
+headers.response.SERVER_ERROR;

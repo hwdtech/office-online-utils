@@ -10,6 +10,15 @@ export const placeholders: {
   [key: string]: string | number;
 };
 
+export const headers: {
+  request: {
+    [key: string]: string;
+  },
+  response: {
+    [key: string]: string;
+  }
+};
+
 export interface OfficeUrlOptions {
   [key: string]: string
 }
@@ -56,3 +65,5 @@ export class DefaultHostPage {
 
   sendResponse(res: ServerResponse): void
 }
+
+export type UrlType = 'ReadOnly' | 'ReadWrite';
