@@ -67,3 +67,96 @@ export class DefaultHostPage {
 }
 
 export type UrlType = 'ReadOnly' | 'ReadWrite';
+export type WorkflowType = 'Assign' | 'Submit';
+
+export interface CheckFileInfoDto {
+  // required props
+  BaseFileName: string;
+  OwnerId: string;
+  UserId: string;
+  Size: number;
+  Version: string;
+
+  // WOPI host capabilities props
+  SupportedShareUrlTypes?: UrlType;
+  SupportsCobalt?: boolean;
+  SupportsContainers?: boolean;
+  SupportsDeleteFile?: boolean;
+  SupportsEcosystem?: boolean;
+  SupportsExtendedLockLength?: boolean;
+  SupportsFolders?: boolean;
+  SupportsGetFileWopiSrc?: boolean;
+  SupportsGetLock?: boolean;
+  SupportsLocks?: boolean;
+  SupportsRename?: boolean;
+  SupportsUpdate?: boolean;
+  SupportsUserInfo?: boolean;
+
+  // metadata props
+  IsAnonymousUser?: boolean;
+  IsEduUser?: boolean;
+  LicenseCheckForEditIsEnabled?: boolean;
+  UserFriendlyName?: string;
+  UserInfo?: string;
+
+  // user permission props
+  ReadOnly?: boolean;
+  RestrictedWebViewOnly?: boolean;
+  UserCanAttend?: boolean;
+  UserCanNotWriteRelative?: boolean;
+  UserCanPresent?: boolean;
+  UserCanRename?: boolean;
+  UserCanWrite?: boolean;
+
+  // file URL props
+  CloseUrl?: string;
+  DownloadUrl?: string;
+  FileSharingUrl?: string;
+  FileUrl?: string;
+  FileVersionUrl?: string;
+  HostEditUrl?: string;
+  HostEmbeddedViewUrl?: string;
+  HostViewUrl?: string;
+  SignoutUrl?: string;
+
+  // breadcrumb props
+  BreadcrumbBrandName?: string;
+  BreadcrumbBrandUrl?: string;
+  BreadcrumbDocName?: string;
+  BreadcrumbFolderName?: string;
+  BreadcrumbFolderUrl?: string;
+
+  // misc props
+  AllowAdditionalMicrosoftServices?: boolean;
+  AllowErrorReportPrompt?: boolean;
+  AllowExternalMarketplace?: boolean;
+  CloseButtonClosesWindow?: boolean;
+  DisablePrint?: boolean;
+  DisableTranslation?: boolean;
+  FileExtension?: number;
+  FileNameMaxLength?: number;
+  LastModifiedTime?: string;
+  SHA256?: string;
+  UniqueContentId?: string;
+
+  // unused and future props
+  ClientUrl?: string;
+  DisableBrowserCachingOfUserContent?: boolean;
+  HostAuthenticationId?: string;
+  HostEmbeddedEditUrl?: string;
+  HostNotes?: string;
+  HostRestUrl?: string;
+  IrmPolicyDescription?: string;
+  IrmPolicyTitle?: string;
+  PresenceProvider?: string;
+  PresenceUserId?: string;
+  ProtectInClient?: boolean;
+  SignInUrl?: string;
+  SupportsFileCreation?: boolean;
+  SupportsScenarioLinks?: boolean;
+  SupportsSecureStore?: boolean;
+  TenantId?: string;
+  TimeZone?: string;
+  UserPrincipalName?: string;
+  WebEditingDisabled?: boolean;
+}
