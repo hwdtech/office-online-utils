@@ -1,6 +1,6 @@
 {
   "name": "office-online-utils",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Utility set for easy Office Online integration",
   "main": "index.js",
   "types": "./types",
