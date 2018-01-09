@@ -133,7 +133,7 @@ export interface CheckFileInfoDto {
   CloseButtonClosesWindow?: boolean;
   DisablePrint?: boolean;
   DisableTranslation?: boolean;
-  FileExtension?: number;
+  FileExtension?: string;
   FileNameMaxLength?: number;
   LastModifiedTime?: string;
   SHA256?: string;
