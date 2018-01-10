@@ -19,6 +19,10 @@ export const headers: {
   }
 };
 
+export const methods: {
+  [key: string]: string;
+};
+
 export interface OfficeUrlOptions {
   [key: string]: string
 }
@@ -67,7 +71,6 @@ export class DefaultHostPage {
 }
 
 export type UrlType = 'ReadOnly' | 'ReadWrite';
-export type WorkflowType = 'Assign' | 'Submit';
 
 export interface CheckFileInfoDto {
   // required props
