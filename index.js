@@ -10,6 +10,6 @@ module.exports = {
   DefaultHostPage,
   actions,
   urlPlaceholders,
-  headers,
-  methods
+  wopiHeaders: headers,
+  wopiMethods: methods
 };

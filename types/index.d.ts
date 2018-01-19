@@ -10,11 +10,11 @@ export const urlPlaceholders: {
   [key: string]: string | number;
 };
 
-export const headers: {
+export const wopiHeaders: {
   [key: string]: string;
 };
 
-export const methods: {
+export const wopiMethods: {
   [key: string]: string;
 };
 
