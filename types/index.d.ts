@@ -6,17 +6,12 @@ export const actions: {
   [key: string]: string;
 };
 
-export const placeholders: {
+export const urlPlaceholders: {
   [key: string]: string | number;
 };
 
 export const headers: {
-  request: {
-    [key: string]: string;
-  },
-  response: {
-    [key: string]: string;
-  }
+  [key: string]: string;
 };
 
 export const methods: {

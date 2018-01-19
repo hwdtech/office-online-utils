@@ -1,4 +1,4 @@
-import { actions, placeholders, Discovery, DefaultHostPage, headers, methods } from 'office-online-utils';
+import { actions, urlPlaceholders, Discovery, DefaultHostPage, headers, methods } from 'office-online-utils';
 
 const discovery = new Discovery('<?xml version="1.0" encoding="utf-8"?><wopi-discovery></wopi-discovery></xml>');
 
@@ -11,7 +11,7 @@ sampleAction.favicon;
 
 // $ExpectType string
 sampleAction.getUrl('https://example.com', {
-  [placeholders.DC_LLCC]: 'en-US'
+  [urlPlaceholders.DC_LLCC]: 'en-US'
 });
 
 const defaultHostPage = new DefaultHostPage({
@@ -23,9 +23,9 @@ const defaultHostPage = new DefaultHostPage({
 defaultHostPage.render();
 
 // $ExpectType string
-headers.request.CORRELATION_ID;
+headers.CORRELATION_ID;
 // $ExpectType string
-headers.response.SERVER_ERROR;
+headers.SERVER_ERROR;
 
 // $ExpectType string
 methods.LOCK;

@@ -52,4 +52,4 @@ app.get('/files/:id', (req, res, next) => {
 });
 ```
 
-You can see all available options [here](/lib/DefaultHostPage.js#L4)
+You can see all available options [here](/lib/host-page/DefaultHostPage.js#L4)
