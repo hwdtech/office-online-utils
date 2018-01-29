@@ -67,6 +67,12 @@ export const wopiHeaders: {
   LOCK_FAILURE_REASON: string;
   REQUESTED_NAME: string;
   INVALID_FILE_NAME_ERROR: string;
+  SUGGESTED_TARGET: string;
+  RELATIVE_TARGET: string;
+  OVERWRITE_RELATIVE_TARGET: string;
+  SIZE: string;
+  FILE_CONVERSION: string;
+  VALID_RELATIVE_TARGET: string;
 };
 
 export const wopiMethods: {
@@ -76,6 +82,7 @@ export const wopiMethods: {
   UNLOCK: string;
   PUT: string;
   RENAME_FILE: string;
+  PUT_RELATIVE: string;
 };
 
 export interface OfficeUrlOptions {
@@ -217,4 +224,11 @@ export interface CheckFileInfoDto {
   TimeZone?: string;
   UserPrincipalName?: string;
   WebEditingDisabled?: boolean;
+}
+
+export interface PutRelativeFileDto {
+  Name: string;
+  Url: string;
+  HostViewUrl?: string;
+  HostEditUrl?: string;
 }
