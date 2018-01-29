@@ -86,8 +86,12 @@ export const wopiMethods: {
   PUT_RELATIVE: string;
 };
 
+type Headers = {
+  [header: string]: string | undefined
+};
+
 export const getHeaders: {
-  fromExpressRequest: (req: Request) => Partial<typeof wopiHeaders>;
+  fromExpressRequest: (req: Request) => Headers;
 };
 
 export interface OfficeUrlOptions {
