@@ -3,19 +3,79 @@
 import { ServerResponse } from 'http';
 
 export const actions: {
-  [key: string]: string;
+  VIEW: string;
+  EDIT: string;
+  EDITNEW: string;
+  CONVERT: string;
+  GETINFO: string;
+  INTERACTIVEPREVIEW: string;
+  MOBILE_VIEW: string;
+  EMBEDVIEW: string;
+  IMAGEPREVIEW: string;
+  FORMSUBMIT: string;
+  FORMEDIT: string;
+  REST: string;
+  PRESENT: string;
+  PRESENTSERVICE: string;
+  ATTEND: string;
+  ATTENDSERVICE: string;
+  PRELOADEDIT: string;
+  PRELOADVIEW: string;
+  SYNDICATE: string;
+  LEGACYWEBSERVICE: string;
+  RTC: string;
+  COLLAB: string;
+  DOCUMENTCHAT: string;
 };
 
 export const urlPlaceholders: {
-  [key: string]: string | number;
+  BUSINESS_USER: string;
+  DC_LLCC: string;
+  DISABLE_ASYNC: string;
+  DISABLE_BROADCAST: string;
+  DISABLE_CHAT: string;
+  EMBEDDED: string;
+  FULLSCREEN: string;
+  HOST_SESSION_ID: string;
+  PERFSTATS: string;
+  RECORDING: string;
+  THEME_ID: string;
+  UI_LLCC: string;
+  VALIDATOR_TEST_CATEGORY: string;
 };
 
 export const wopiHeaders: {
-  [key: string]: string;
+  APP_ENDPOINT: string;
+  CLIENT_VERSION: string;
+  CORRELATION_ID: string;
+  DEVICE_ID: string;
+  SESSION_ID: string;
+  MACHINE_NAME: string;
+  PROOF: string;
+  PROOF_OLD: string;
+  TIMESTAMP: string;
+  SESSION_CONTEXT: string;
+  URL_TYPE: string;
+  MAX_EXPECTED_SIZE: string;
+  OLD_LOCK: string;
+  OVERRIDE: string;
+  HOST_ENDPOINT: string;
+  SERVER_ERROR: string;
+  SERVER_VERSION: string;
+  ITEM_VERSION: string;
+  LOCK: string;
+  LOCK_FAILURE_REASON: string;
+  REQUESTED_NAME: string;
+  INVALID_FILE_NAME_ERROR: string;
 };
 
 export const wopiMethods: {
-  [key: string]: string;
+  LOCK: string;
+  GET_LOCK: string;
+  REFRESH_LOCK: string;
+  UNLOCK: string;
+  PUT: string;
+  RENAME_FILE: string;
 };
 
 export interface OfficeUrlOptions {
