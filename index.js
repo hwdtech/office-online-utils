@@ -1,15 +1,9 @@
-const Discovery = require('./lib/discovery/Discovery');
-const DefaultHostPage = require('./lib/host-page/DefaultHostPage');
-const actions = require('./lib/constants/actions');
-const urlPlaceholders = require('./lib/constants/urlPlaceholders');
-const headers = require('./lib/constants/headers');
-const methods = require('./lib/constants/methods');
-
 module.exports = {
-  Discovery,
-  DefaultHostPage,
-  actions,
-  urlPlaceholders,
-  wopiHeaders: headers,
-  wopiMethods: methods
+  Discovery: require('./lib/discovery/Discovery'),
+  DefaultHostPage: require('./lib/host-page/DefaultHostPage'),
+  actions: require('./lib/constants/actions'),
+  urlPlaceholders: require('./lib/constants/urlPlaceholders'),
+  wopiHeaders: require('./lib/constants/headers'),
+  wopiMethods: require('./lib/constants/methods'),
+  getHeaders: require('./lib/utils/headersFromRequest')
 };

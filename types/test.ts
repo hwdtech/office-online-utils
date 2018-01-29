@@ -1,4 +1,4 @@
-import { actions, urlPlaceholders, Discovery, DefaultHostPage, wopiHeaders, wopiMethods } from 'office-online-utils';
+import { actions, urlPlaceholders, Discovery, DefaultHostPage, wopiHeaders, wopiMethods, getHeaders } from 'office-online-utils';
 
 const discovery = new Discovery('<?xml version="1.0" encoding="utf-8"?><wopi-discovery></wopi-discovery></xml>');
 
@@ -29,3 +29,9 @@ wopiHeaders.SERVER_ERROR;
 
 // $ExpectType string
 wopiMethods.LOCK;
+
+// $ExpectError
+getHeaders.fromExpressRequest();
+
+// $ExpectError
+getHeaders.fromExpressRequest({});

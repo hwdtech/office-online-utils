@@ -1,9 +1,10 @@
-*-test.js
+*.test.js
 node_modules
 .eslintrc.js
 .gitignore
 yarn.lock
-
 lib/discovery/discovery-fixture.xml
 coverage
 .idea
+types/*.json
+types/test.ts

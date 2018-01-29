@@ -1,6 +1,7 @@
 // TypeScript Version: 2.2
 
 import { ServerResponse } from 'http';
+import { Request } from 'express';
 
 export const actions: {
   VIEW: string;
@@ -83,6 +84,10 @@ export const wopiMethods: {
   PUT: string;
   RENAME_FILE: string;
   PUT_RELATIVE: string;
+};
+
+export const getHeaders: {
+  fromExpressRequest: (req: Request) => Partial<typeof wopiHeaders>;
 };
 
 export interface OfficeUrlOptions {
